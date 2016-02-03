@@ -16,7 +16,7 @@ def triangles(x):
 			print(a)
 triangles(int(input("input number: ")))
 
-# This time used generator.Gosh,it's nearly drive me crazy.TOO HARD
+# This time used generator.Gosh,it's nearly drive me crazy.TOO HARD.
 def triangles(x):
 	a=[1]
 	yield(a)
@@ -31,6 +31,7 @@ def triangles(x):
 		else:
 			a+=[1]
 			yield(a)
+# Just in Pycharm,cmd will be crash.
 x=int(input("input number: "))
 T=triangles(x)
 n=0
@@ -39,3 +40,6 @@ for T in triangles(x):
     n+=1
     if n == x:
         break
+# This is used in cmd
+n=triangles(10)
+next(n)
