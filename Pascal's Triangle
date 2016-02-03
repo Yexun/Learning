@@ -19,7 +19,7 @@ triangles(int(input("input number: ")))
 # This time used generator.Gosh,it's nearly drive me crazy.TOO HARD
 def triangles(x):
 	a=[1]
-	print(a)
+	yield(a)
 	for i in range(x):
 		i=len(a)-1
 		if i>0:
