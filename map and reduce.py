@@ -1,4 +1,19 @@
-def normalize(name):
+# Change str to float,OMG! I nearly crazy.
+def str2float(s):
+	def num(x):
+		return {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}[x]
+	s1,s2=s.split('.')
+	def f1(x,y):
+		return x*10+y
+	def f2(x,y):
+		return x*10+y
+	res=reduce(f2,map(num,s2))
+	i=len(str(res))
+	while i>0:
+		res/=10
+		i-=1
+	return reduce(f1,map(num,s1))+res
+print('str2float(\'123.456\') =', str2float('12345.458563485'))def normalize(name):
     return name.title()
 L1 = ['adam', 'LISA', 'barT']
 L2 = list(map(normalize, L1))
@@ -10,3 +25,20 @@ def res(x,y):
 def prod(L):
 	return reduce(res,L)
 print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
+
+# Change str to float,OMG! I nearly crazy.
+def str2float(s):
+	def num(x):
+		return {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9}[x]
+	s1,s2=s.split('.')
+	def f1(x,y):
+		return x*10+y
+	def f2(x,y):
+		return x*10+y
+	res=reduce(f2,map(num,s2))
+	i=len(str(res))
+	while i>0:
+		res/=10
+		i-=1
+	return reduce(f1,map(num,s1))+res
+print('str2float(\'123.456\') =', str2float('12345.458563485'))
